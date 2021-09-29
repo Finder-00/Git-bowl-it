@@ -18,14 +18,31 @@ public class quilleScript : MonoBehaviour
 
     void OnCollisionEnter(Collision infosCollision)
     {
-        if(infosCollision.gameObject.tag == "boulle")
+        if(infosCollision.gameObject.layer == LayerMask.NameToLayer("ObjetInteractif"))
         {
-            // on active la gravite
-            GetComponent<Rigidbody>().useGravity = true;
+            if (gameObject.tag == "quille") {
+                // on active la gravite
+                GetComponent<Rigidbody>().useGravity = true;
 
-            // on ajoutes les points
+                if (infosCollision.gameObject.tag == "pieuvre")
+                {
+                    // on ajoutes les points
+                    GetComponent<JoueurScript>().points += 1;
+                    this.gameObject.tag = "Untagged";
+                }
 
-            // on detruit la quille
+                if (infosCollision.gameObject.tag == "pufferfish")
+                {
+                    GetComponent<JoueurScript>().points += 3;
+                    this.gameObject.tag = "Untagged";
+                }
+
+                if (infosCollision.gameObject.tag == "espadron")
+                {
+                    GetComponent<JoueurScript>().points += 5;
+                    this.gameObject.tag = "Untagged";
+                }
+            }
         }
     }
 }
