@@ -16,7 +16,7 @@ public class JoueurScript : MonoBehaviour
 
     void Update()
     {
-        
+        textePoints.text = points.ToString();
     }
 }
                                                               
