@@ -37,7 +37,7 @@ public class quilleScript : MonoBehaviour
                     this.gameObject.tag = "Untagged";
                 }
 
-                if (infosCollision.gameObject.tag == "espadron")
+                if (infosCollision.gameObject.tag == "espadon")
                 {
                     GetComponent<JoueurScript>().points += 5;
                     this.gameObject.tag = "Untagged";

@@ -8,6 +8,6 @@ public class BoutonRejouer : MonoBehaviour
     
     public void relance()
     {
-        SceneManager.LoadScene("niv1");
+        SceneManager.LoadScene(1);
     }
 }
