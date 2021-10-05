@@ -8,6 +8,7 @@ TagManager:
   - pufferfish
   - quille
   - espadon
+  - EstUtilise
   layers:
   - Default
   - TransparentFX

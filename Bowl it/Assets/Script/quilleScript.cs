@@ -18,31 +18,34 @@ public class quilleScript : MonoBehaviour
 
     void OnCollisionEnter(Collision infosCollision)
     {
-        if(infosCollision.gameObject.layer == LayerMask.NameToLayer("ObjetInteractif"))
+        if(infosCollision.gameObject.layer == 6 || infosCollision.gameObject.tag == "quille")
         {
-            if (gameObject.tag == "quille") {
-                // on active la gravite
-                GetComponent<Rigidbody>().useGravity = true;
-
-                if (infosCollision.gameObject.tag == "pieuvre")
+            // Si la gravité n'est pas activée
+            if (!GetComponent<Rigidbody>().useGravity)
+            {
+                if (infosCollision.gameObject.tag == "pieuvre" || infosCollision.gameObject.tag == "quille")
                 {
                     // on ajoutes les points
-                    GetComponent<JoueurScript>().points += 1;
-                    this.gameObject.tag = "Untagged";
+                    JoueurScript.points += 1;
+                    Debug.Log(JoueurScript.points);
+                    //this.gameObject.tag = "Untagged";
                 }
 
                 if (infosCollision.gameObject.tag == "pufferfish")
                 {
-                    GetComponent<JoueurScript>().points += 3;
-                    this.gameObject.tag = "Untagged";
+                    JoueurScript.points += 3;
+                    //this.gameObject.tag = "Untagged";
                 }
 
                 if (infosCollision.gameObject.tag == "espadon")
                 {
-                    GetComponent<JoueurScript>().points += 5;
-                    this.gameObject.tag = "Untagged";
+                    JoueurScript.points += 5;
+                    //this.gameObject.tag = "Untagged";
                 }
-            }
+            }    
+            // on active la gravité
+            GetComponent<Rigidbody>().useGravity = true;
+
         }
     }
 }

@@ -5,13 +5,15 @@ using UnityEngine.UI;
 
 public class JoueurScript : MonoBehaviour
 {                                                                                                   
-    public int points;
+    public static int points;
     public Text textePoints;
 
 
     void Start()
     {
-        points = 0;   
+        textePoints = GetComponent<Text>();
+        points = 0;
+        textePoints.text = "0";
     }
 
     void Update()
