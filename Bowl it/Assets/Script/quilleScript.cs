@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class quilleScript : MonoBehaviour
 {
+    float lesPoints;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,20 +28,16 @@ public class quilleScript : MonoBehaviour
                 {
                     // on ajoutes les points
                     JoueurScript.points += 1;
-                    Debug.Log(JoueurScript.points);
-                    //this.gameObject.tag = "Untagged";
                 }
 
                 if (infosCollision.gameObject.tag == "pufferfish")
                 {
                     JoueurScript.points += 3;
-                    //this.gameObject.tag = "Untagged";
                 }
 
                 if (infosCollision.gameObject.tag == "espadon")
                 {
                     JoueurScript.points += 5;
-                    //this.gameObject.tag = "Untagged";
                 }
             }    
             // on active la gravité

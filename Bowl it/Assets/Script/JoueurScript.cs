@@ -6,15 +6,16 @@ using TMPro;
 
 public class JoueurScript : MonoBehaviour
 {                                                                                                   
-    public static int points;
-    public TMP_Text textePoints;
+    public static float points;
+    public TextMeshProUGUI textePoints;
 
 
     void Start()
     {
         //textePoints = GetComponent<Text>();
         points = 0;
-        textePoints.text = "0";
+        textePoints = GetComponent<TextMeshProUGUI>();
+        Debug.Log(textePoints);
     }
 
     void Update()

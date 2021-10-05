@@ -1,0 +1,7 @@
+------------ Sources ------------
+
+- Le terrain a été pris sur l'asset store de unity : https://assetstore.unity.com/packages/3d/environments/landscapes/rpg-poly-pack-lite-148410
+
+- Le clavier virtuel de l'intro à été pris dans les exercices en classe
+
+- Aryane a fait les poissons!
