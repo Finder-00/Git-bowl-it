@@ -10,4 +10,9 @@ public class BoutonRejouer : MonoBehaviour
     {
         SceneManager.LoadScene(1);
     }
+
+    public void quitter()
+    {
+        Application.Quit();
+    }
 }
